@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>UISheet</name>
+    <events>
+        <comment>step counter</comment>
+        <variable constant="0" name="contamination_counter" sid="6895126867009152" static="0" type="number">0</variable>
+        <variable constant="0" name="contamination_maximum" sid="3125185635363409" static="0" type="number">100</variable>
+        <variable constant="0" name="step_counter" sid="7083246302666381" static="0" type="number">0</variable>
+        <event-block sid="460156344739748">
+            <conditions>
+                <condition id="0" name="On function" sid="4198230456277156" type="Function">
+                    <param id="0" name="Name">&quot;UpdateStepCounterLabel&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7806839454369966" type="steps_counter">
+                    <param id="0" name="Text">step_counter</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2329321759685553">
+            <conditions>
+                <condition id="0" name="On function" sid="4911392022858842" type="Function">
+                    <param id="0" name="Name">&quot;ResetStepCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="8363128272056451" type="System">
+                    <param id="0" name="Variable">step_counter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="8653356420964923" type="Function">
+                    <param id="0" name="Name">&quot;UpdateStepCounterLabel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8280804127199177">
+            <conditions>
+                <condition id="0" name="On function" sid="9422832140221738" type="Function">
+                    <param id="0" name="Name">&quot;IncrementStepCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="8302145575953707" type="System">
+                    <param id="0" name="Variable">step_counter</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="8565331944346421" type="Function">
+                    <param id="0" name="Name">&quot;UpdateStepCounterLabel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2021469854950193">
+            <conditions>
+                <condition id="0" name="On function" sid="7293733259269264" type="Function">
+                    <param id="0" name="Name">&quot;ResetContaminationCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="66675609737809" type="System">
+                    <param id="0" name="Variable">contamination_counter</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="87086915552901">
+            <conditions>
+                <condition id="0" name="On function" sid="5077281645511839" type="Function">
+                    <param id="0" name="Name">&quot;IncrementStepContaminationCounter&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="3109997333425214" type="System">
+                    <param id="0" name="Variable">contamination_counter</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block collapsed="1" sid="6139654446992693">
+            <conditions>
+                <condition id="0" name="On function" sid="436673914121495" type="Function">
+                    <param id="0" name="Name">&quot;UpdateContaminationCounterBar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2661689793347099">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6083507502796029" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8485679454912442" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a00&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4600417451564709">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2551990690508194" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2828501956387505" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1269004081229895" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a01&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6728786027188333">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8715730987882055" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2247273091785289" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7503102052913897" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a02&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6751175831401874">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6682081862142416" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="181109485298681" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9324822079281959" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a03&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8168195061114511">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3176442930015434" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">15</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6909405729420679" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8299236303280159" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a04&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7328119301168174">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="3406854536913941" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">20</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="2971711474419478" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7961056989822774" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a05&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5442489765059549">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4434418214095431" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">25</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7627043739606035" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8385418925570708" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a06&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1763078971725792">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="242321188181345" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">30</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9323907028129254" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">35</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6921478803956401" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a07&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9418693478110793">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5524069494717284" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">35</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="5564185891623803" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4374999574418584" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a08&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3016941309918241">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7957280796736754" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">40</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="9905353537452269" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">45</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3791486445102839" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a09&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2407501894752882">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7917829273672449" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">45</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1235955002168944" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8851848317986342" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a10&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8356774476238413">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="9209898699415768" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">50</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3015752145942091" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">55</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2676480375449111" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a11&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6696378581592006">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4052134374551084" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">55</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6582291997129044" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5712583401062134" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a12&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="378372396576347">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="8998867357878392" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">60</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="1892756977045509" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2882478379539438" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a13&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1740510841672496">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4120258145099868" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">65</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7902353423408158" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="756048031766669" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a14&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9416311355638837">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="842912807889196" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3550257903073135" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">75</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7844815113222816" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a15&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9323818482692852">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="712353760486935" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">75</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="7567767483149503" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">80</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4527576797714411" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a16&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7612622191581027">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4563127901292993" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">80</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6477017315149317" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">85</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5923952222989462" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a17&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7839006390487726">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="778805510741387" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">85</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="3827090525395423" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="451157626419631" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a18&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9535159263039172">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4982877601677119" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">90</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="4947091829855629" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">95</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1217132531082543" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a19&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7358201664351449">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="281432348060548" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">95</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="6749249722367957" type="System">
+                            <param id="0" name="Variable">contamination_counter</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8761918356178792" type="contamination_bar">
+                            <param id="0" name="Animation">&quot;a20&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="6987705473099645">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4528005137322619" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="250840921457022" type="System">
+                    <param id="0" name="First value">Function.Call(&quot;IsPlayerAlive&quot;)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="7230416283505973" type="Function">
+                    <param id="0" name="Name">&quot;IncrementStepContaminationCounter&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="1131691673032357" type="Function">
+                    <param id="0" name="Name">&quot;UpdateContaminationCounterBar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Falta pegar a pontuacao e enviar para algum local.</comment>
+        <event-block sid="5204709097187746">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3337482375992272" type="System">
+                    <param id="0" name="Variable">contamination_counter</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">contamination_maximum</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1311646578463077" type="Function">
+                    <param id="0" name="Name">&quot;KillPlayer&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

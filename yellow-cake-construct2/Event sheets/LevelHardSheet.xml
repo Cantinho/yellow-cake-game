@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelHardSheet</name>
+    <events>
+        <include>LevelSheet</include>
+        <event-block sid="9736539102626361">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7427602037833585" type="Mouse">
+                    <param id="0" name="Object">4X6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="7728258902561358" type="4X6">
+                    <param id="0" name="Animation">&quot;4X6_hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9951511181399224">
+            <conditions>
+                <condition id="-22" name="Else" sid="5155089478735021" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="2575110160540993" type="4X6">
+                    <param id="0" name="Animation">&quot;4X6&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4497947946205186">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9070732700878407" type="Mouse">
+                    <param id="0" name="Object">4x7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5813445444081306" type="4x7">
+                    <param id="0" name="Animation">&quot;4X7_hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1003194589845951">
+            <conditions>
+                <condition id="-22" name="Else" sid="7371847260534172" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5973508805593228" type="4x7">
+                    <param id="0" name="Animation">&quot;4X7&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>LevelSelected: EASY3X4; EASY3X5; MEDIUM4X4; MEDIUM4X5; HARD4X6; HARD4X7; CESIUM-137-5X7</comment>
+        <event-block sid="9421386473517458">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6443799024028306" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">4X6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2239533667580472" type="System">
+                    <param id="0" name="Variable">LevelSelected</param>
+                    <param id="1" name="Value">&quot;HARD4X6&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="4901106722764151" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="0" name="Call function" sid="6822982765554703" type="Function">
+                    <param id="0" name="Name">&quot;GoToLevel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3678849802523322">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="4924678329782882" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">4x7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="906726315834479" type="System">
+                    <param id="0" name="Variable">LevelSelected</param>
+                    <param id="1" name="Value">&quot;HARD4X7&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="2291251303522001" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="0" name="Call function" sid="9424366228940324" type="Function">
+                    <param id="0" name="Name">&quot;GoToLevel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Back to Menu Easy</comment>
+    </events>
+</c2eventsheet>

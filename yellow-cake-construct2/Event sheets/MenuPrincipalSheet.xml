@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MenuPrincipalSheet</name>
+    <events>
+        <variable constant="0" name="sound_on" sid="9930482093606756" static="0" type="number">1</variable>
+        <event-block sid="2827110117708234">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1878431791373647" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">clean_up_touch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="7163473397254009" type="System">
+                    <param id="0" name="Layout">&quot;Level&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6300264186878224">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1482539272908085" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">achivements_touch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="9255609999103451" type="Audio">
+                    <param id="0" name="Audio file">compressed_air_pistol</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">100</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8636569758155773">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6474870745072713" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">sound_touch</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9606862626749656">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="5402649459570908" type="System">
+                            <param id="0" name="Variable">sound_on</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="33" name="Stop all" sid="7408790458465445" type="Audio" />
+                        <action id="-9" name="Set value" sid="5337387680469" type="System">
+                            <param id="0" name="Variable">sound_on</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="4316740261277851" type="sound_bt">
+                            <param id="0" name="Animation">&quot;sound_off&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5765325576572003">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="715108762408418" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="7286821208076283" type="Audio">
+                            <param id="0" name="Audio file">intro_tremolo_3_</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">70</param>
+                            <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5011289304141461" type="System">
+                            <param id="0" name="Variable">sound_on</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5373227773939248" type="sound_bt">
+                            <param id="0" name="Animation">&quot;sound_on&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
