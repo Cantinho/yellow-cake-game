@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SplashSheet</name>
+    <events>
+        <event-block sid="554241107007824">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4590725328799733" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6303714029795559" type="TiledBackground">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="0" name="Play" sid="772273903917202" type="Audio">
+                    <param id="0" name="Audio file">intro_tremolo_3_</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">70</param>
+                    <param id="1" name="Tag (optional)">&quot;intro&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="6906871792441073" type="System">
+                    <param id="0" name="Seconds">2.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3881160164169944" type="tap_to_play">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Play" sid="6721676532103765" type="Audio">
+                    <param id="0" name="Audio file">geiger_counter</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">15</param>
+                    <param id="1" name="Tag (optional)">&quot;geiger&quot;</param>
+                </action>
+                <action id="4" name="Preload" sid="802724679688548" type="Audio">
+                    <param id="0" name="Audio file">compressed_air_pistol</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>While on floor, keep holding the &quot;run right&quot; control, so the character keeps running.</comment>
+        <event-block sid="120356524516636">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="1906900769362237" type="TiledBackground">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="X co-ordinate">-Self.Width / 2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="7371559652400859" type="TiledBackground">
+                    <param id="0" name="X">Self.X + Self.Width/2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="117191025729258">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade out finished" sid="6532748517219878" type="tap_to_play" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="0" name="Restart fade" sid="5233716491195788" type="tap_to_play" />
+            </actions>
+        </event-block>
+        <event-block sid="4132334939656861">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="9679141190708451" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">tap_to_play</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="4562179109381682" type="System">
+                    <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                </action>
+                <action id="6" name="Stop" sid="3572635818730694" type="Audio">
+                    <param id="0" name="Tag">&quot;geiger&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

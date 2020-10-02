@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>LevelSheet</name>
+    <events>
+        <variable constant="0" name="cesium_137_unlocked" sid="2722178235014729" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="4129651239561924" static="0" type="number">0</variable>
+        <comment>ObjectsLevelParameters</comment>
+        <variable constant="0" name="xTable" sid="9660603062764236" static="0" type="number">0</variable>
+        <variable constant="0" name="yTable" sid="7058358989473253" static="0" type="number">0</variable>
+        <variable constant="0" name="tableWidth" sid="2262134604060516" static="0" type="number">0</variable>
+        <variable constant="0" name="tableHeight" sid="6058149217762494" static="0" type="number">0</variable>
+        <variable constant="0" name="chessSideDimension" sid="5267014296767282" static="0" type="number">0</variable>
+        <variable constant="0" name="timeAvailableInSeconds" sid="5847601533585313" static="0" type="number">0</variable>
+        <comment>LevelSelected: EASY3X4; EASY3X5; MEDIUM4X4; MEDIUM4X5; HARD4X6; HARD4X7; CESIUM-137-5X7</comment>
+        <variable constant="0" name="LevelSelected" sid="9616400430428179" static="0" type="text"></variable>
+        <event-block sid="4312783404538168">
+            <conditions>
+                <condition id="0" name="On function" sid="4517840826338412" type="Function">
+                    <param id="0" name="Name">&quot;GoToLevel&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7866198709218564">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1529354536031825" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;EASY3X4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4719148597366418" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1875653842409595" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">350</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1475364980100048" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">220</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6015166389262896" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">240</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="667504192462436" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1418412363875696" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6034382597886052" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="7040595562273679" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2389589555576251">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="233356768646722" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;EASY3X5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="349555821247739" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">200</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1582588919503684" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">350</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8313674768241738" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">190</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2646986344057021" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">240</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8428112816241046" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4815415322469139" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6070237486660461" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="6967300395417635" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3298447845028745">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6008891753585933" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;MEDIUM4X4&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9617798331845812" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">120</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1806211056720732" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">450</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7915368798396878" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4779031258204024" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1235893196666686" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9119080140418023" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3599409484785721" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="4436575699834319" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5087127764259908">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1892879590472996" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;MEDIUM4X5&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="2640020694926242" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">120</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9192872600333944" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">350</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4602472650691966" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7274240545104099" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8212780172272129" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1478428968214129" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3194050248397138" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="288551440494057" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7524670611444542">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4811506836397594" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HARD4X6&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3922227338569124" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">150</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7408477448506225" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">340</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6261347408715804" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">160</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3979521508293482" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">120</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="59565524259325" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8911988114737477" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">6</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="9753459376639303" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="5538274626537048" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="188005705171248">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="4345236112810271" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;HARD4X7&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="9416783589112496" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8836486056932862" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">340</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="8548489669543053" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">135</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6482697716209441" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">120</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3894050317418338" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3357823023304863" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="6897707947967435" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="9987167276222642" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6818589913264873">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1273298362131628" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;CESIUM-137-5X7&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="1868480197035598" type="System">
+                            <param id="0" name="Variable">xTable</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2586243904138812" type="System">
+                            <param id="0" name="Variable">yTable</param>
+                            <param id="1" name="Value">350</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2444119879407289" type="System">
+                            <param id="0" name="Variable">chessSideDimension</param>
+                            <param id="1" name="Value">220</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="5768111303279986" type="System">
+                            <param id="0" name="Variable">timeAvailableInSeconds</param>
+                            <param id="1" name="Value">30</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7192674456358033" type="System">
+                            <param id="0" name="Variable">tableWidth</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3214521010525212" type="System">
+                            <param id="0" name="Variable">tableHeight</param>
+                            <param id="1" name="Value">7</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="320767831728972" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="9832040115656944" type="System">
+                            <param id="0" name="Layout">&quot;Fase&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1447483052002792">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7996146322638211" type="Mouse">
+                    <param id="0" name="Object">easy_lbl</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="423073397332164" type="easy_lbl">
+                    <param id="0" name="Animation">&quot;easy_hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3093178679501214">
+            <conditions>
+                <condition id="-22" name="Else" sid="118646115309185" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5856294063946824" type="easy_lbl">
+                    <param id="0" name="Animation">&quot;easy&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2708413122338662">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="885302797829527" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">easy_touch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="5516875061359466" type="System">
+                    <param id="0" name="Layout">&quot;LevelEasy&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="392080243258042">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="9448790750604115" type="Mouse">
+                    <param id="0" name="Object">medium_lbl</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="5064569130295267" type="medium_lbl">
+                    <param id="0" name="Animation">&quot;medium_hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6454575718181663">
+            <conditions>
+                <condition id="-22" name="Else" sid="8612211850968802" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9613402716612081" type="medium_lbl">
+                    <param id="0" name="Animation">&quot;medium&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2077621516013916">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="250115205023872" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">medium_touch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="2695760588135303" type="System">
+                    <param id="0" name="Layout">&quot;LevelMedium&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2782906368390238">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="81391864741965" type="Mouse">
+                    <param id="0" name="Object">hard_lbl</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="8318678665040482" type="hard_lbl">
+                    <param id="0" name="Animation">&quot;hard_hover&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8292616675175373">
+            <conditions>
+                <condition id="-22" name="Else" sid="2664972160995888" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="9809533101431752" type="hard_lbl">
+                    <param id="0" name="Animation">&quot;hard&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3887528392429133">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8489871939103821" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">hard_touch</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="7161646497643986" type="System">
+                    <param id="0" name="Layout">&quot;LevelHard&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9439055077314335">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="8414915973692317" type="System">
+                    <param id="0" name="Variable">cesium_137_unlocked</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="3544654380688951">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="9345343864012209" type="Mouse">
+                            <param id="0" name="Object">cesium_137_lbl</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="509957766097597" type="cesium_137_lbl">
+                            <param id="0" name="Animation">&quot;cesium_hover&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8762315664681033">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7806241423251165" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5438385259030551" type="cesium_137_lbl">
+                            <param id="0" name="Animation">&quot;cesium&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3746572542277989">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="1579274029352595" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">cesium_137_touch</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="3887677787797922" type="System">
+                            <param id="0" name="Variable">LevelSelected</param>
+                            <param id="1" name="Value">&quot;CESIUM-137-5X7&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7944815889737215" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3152440967120628" type="Function">
+                            <param id="0" name="Name">&quot;GoToLevel&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1791273786864816">
+            <conditions>
+                <condition id="-22" name="Else" sid="714155996157367" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>Tocar sirene de alerta</comment>
+                <event-block sid="8235999833147341">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="8580613964857911" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">restricted</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="5449286034441462" type="restricted">
+                            <param id="0" name="&apos;On&apos; time">0.05</param>
+                            <param id="1" name="&apos;Off&apos; time">0.05</param>
+                            <param id="2" name="Duration">0.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <comment>Back to Main Menu</comment>
+        <event-block sid="3103494772118943">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6822622129706032" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">voltarMenuFase</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-25" name="Go to layout (by name)" sid="1871719032943962" type="System">
+                    <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1043 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FaseSheet</name>
+    <events>
+        <include>LevelSheet</include>
+        <include>UISheet</include>
+        <include>PlayerSheet</include>
+        <variable constant="0" name="shuffleCounter" sid="157304937607981" static="0" type="number">0</variable>
+        <variable constant="0" name="inicializado" sid="4529507191525754" static="0" type="number">0</variable>
+        <variable constant="0" name="ID" sid="7606051201594444" static="0" type="number">0</variable>
+        <event-block any="1" collapsed="1" sid="5119473830330051">
+            <conditions>
+                <condition id="0" name="On function" sid="4582914052360459" type="Function">
+                    <param id="0" name="Name">&quot;AtualizaAdjacentes&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>baixo</comment>
+                <event-block sid="3227128519653483">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="3912230112313357" type="System">
+                            <param id="0" name="First value">ID%ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">ArrayFase1.Height-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8334951499397976">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5934633495967298" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-ArrayFase1.Height+1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="8853019538602345">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="365534678781826" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9105866791100271" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4534353433429693">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="443397798148091" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3130853185762634" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4040735939613759">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3218405956895781" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1453224690538093">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7408670877253499" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6223476923988553">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="9618728269155232" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="3022805020996256" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7599144558608494">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6164194562130703" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8214549508250187" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>direita</comment>
+                <event-block sid="5134018533994158">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="957223770868922" type="System">
+                            <param id="0" name="First value">ID/ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">ArrayFase1.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4722132827073216">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4148245308692581" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID%ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2346873726838108">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="9910633063035558" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1158500988819937" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2204102007109534">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4683410763197628" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8355259945651103" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3935542794525904">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="4428519002376487" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8139958478197529">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7814963376809052" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6606416387673568">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="9677786701172762" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4398739443185332" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4195338066015599">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6713016858699553" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="2003146398717399" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>esquerda</comment>
+                <event-block sid="3360006912086562">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4140533266741643" type="System">
+                            <param id="0" name="First value">ID/ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8509724423883913">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="184533735629991" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID + (ArrayFase1.Width-1)*ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3030475028695339">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="27130629411021" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6568419319884453" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3980938736375661">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8824597281610905" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1699628937487035" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="5492248413024129">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="5412705306603387" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3082702980445742">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3122718877443378" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2617822646231528">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="1289466474240462" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9816455226745509" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4745677388148732">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="875493909288568" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="4031539261607519" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>cima</comment>
+                <event-block sid="9095504297783775">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9595596144635085" type="System">
+                            <param id="0" name="First value">ID%ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="8838949974671932" type="Text2">
+                            <param id="0" name="Text">ID%ArrayFase1.Height</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9850099629710555">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6687216034425381" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+ArrayFase1.Height-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6053431044436753">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="4031798647761394" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="9342936267786661" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3810830900333126">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="6842132655602049" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="810626588900097" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1955169094260678">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="9638485460522405" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8762623852260696">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9672192677738375" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="446220054749506">
+                                    <conditions>
+                                        <condition id="2" name="Is playing" sid="6370345687768721" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6907316532842841" type="Peca">
+                                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9041769794563413">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="3728878837213794" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1202592197492427" type="Peca">
+                                            <param id="0" name="Animation">&quot;apagado&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block any="1" collapsed="1" sid="5367960923493517">
+            <conditions>
+                <condition id="0" name="On function" sid="998790331858003" type="Function">
+                    <param id="0" name="Name">&quot;AtualizaAdjacentesInicializador&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <comment>baixo</comment>
+                <event-block sid="5817632236133873">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="147378428076973" type="System">
+                            <param id="0" name="First value">ID%ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">ArrayFase1.Height-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="333756487853606">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5813442257713193" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-ArrayFase1.Height+1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="789741700983081">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="6668853546011229" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="6096001853919677" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9661185644624934">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="4766526389851701" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5233119706860853" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1484423267851662">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="1344318376609987" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9552136677842024">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1928713719119174" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7891318936159439">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="1689110029154614" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7967481482504268" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4420697529402044">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="5268609902643889" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="9385693950793535" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>direita</comment>
+                <event-block sid="6551886408369802">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6854455847496408" type="System">
+                            <param id="0" name="First value">ID/ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">ArrayFase1.Width-1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1743601964851532">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7893502264889277" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID%ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4489126387180885">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="4875799895725094" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="2620468169171357" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3398347805190561">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1086602840009227" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="6761199845231734" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9603230198772393">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="8247676561283525" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6285900971922939">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1376236374810923" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9389225176832103">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2642465449714256" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="4121395502280873" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6993451243094829">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="983362271633141" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5913478744478057" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>esquerda</comment>
+                <event-block sid="9072712769186489">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7363995682516769" type="System">
+                            <param id="0" name="First value">ID/ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3474470322265457">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="83450194819433" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID + (ArrayFase1.Width-1)*ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9311372817163933">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="9274334977875264" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5382330072466254" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9379739613921715">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8138249091568486" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="4029244641275701" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7243676782820497">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="7463968979815474" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4907221890114113">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="525375975985782" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-ArrayFase1.Height</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3429058766471118">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7476086262572092" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="9974485497896748" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1933565340134555">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="8744691024687424" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="3906429600424023" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>cima</comment>
+                <event-block sid="7848271310250579">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1938101059033679" type="System">
+                            <param id="0" name="First value">ID%ArrayFase1.Height</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4536154407881628" type="Text2">
+                            <param id="0" name="Text">ID%ArrayFase1.Height</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4533437305554727">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1237522802780435" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID+ArrayFase1.Height-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9631452848061348">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="8596904014298432" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5805774543661362" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7431892011034346">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="1212004989605302" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5380250912740674" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="8029897970713096">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="3212547214039093" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="4726715499487407">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4148458838632833" type="Peca">
+                                    <param id="0" name="Instance variable">id</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">ID-1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="6747919281086923">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5797195580942057" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="7653917563202246" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8734994180156226">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="728588777302567" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="5973397221739686" type="Peca">
+                                            <param id="0" name="Instance variable">apagado</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4299708425471769">
+            <conditions>
+                <condition id="0" name="On function" sid="9808509928435663" type="Function">
+                    <param id="0" name="Name">&quot;Inicializar&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="7829065544671706">
+                    <conditions>
+                        <condition id="-10" name="For" sid="4959694033750264" type="System">
+                            <param id="0" name="Name">&quot;i&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">15</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="1855227902321917" type="System">
+                            <param id="0" name="Seconds">0.1*(loopindex(&quot;i&quot;))</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="2919582951254049" type="System">
+                            <param id="0" name="Variable">ID</param>
+                            <param id="1" name="Value">round(random(0, ArrayFase1.Height*ArrayFase1.Width-1))</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="2063198832581397" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="0" name="Call function" sid="9043745795034983" type="Function">
+                            <param id="0" name="Name">&quot;AtualizaAdjacentesInicializador&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Set text" sid="1432029360762688" type="INDEX">
+                            <param id="0" name="Text">ID</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5379817726236146">
+                    <conditions />
+                    <actions>
+                        <action id="-16" name="Wait" sid="6891136004050134" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="1186663015413004" type="System">
+                            <param id="0" name="Variable">inicializado</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7065461289288083">
+            <conditions>
+                <condition id="0" name="On function" sid="7008655373677667" type="Function">
+                    <param id="0" name="Name">&quot;Start&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="2834210052248674" type="System">
+                    <param id="0" name="Object to create">ArrayFase1</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">0</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="4818708501047963" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="1" name="Set size" sid="1104452255768196" type="ArrayFase1">
+                    <param id="0" name="Width">tableWidth</param>
+                    <param id="1" name="Height">tableHeight</param>
+                    <param id="2" name="Depth">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="8455557818237349" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-7" name="Set size" sid="7800559849756227" type="Peca">
+                    <param id="0" name="Width">chessSideDimension</param>
+                    <param id="1" name="Height">chessSideDimension</param>
+                </action>
+                <action id="-9" name="Set value" sid="48222265200105" type="System">
+                    <param id="0" name="Variable">contamination_maximum</param>
+                    <param id="1" name="Value">timeAvailableInSeconds</param>
+                </action>
+                <action id="0" name="Play" sid="3338304264414657" type="Audio">
+                    <param id="0" name="Audio file">intro_tremolo_3_</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="4227112404074745" type="System">
+                    <param id="0" name="Variable">inicializado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="9818229309721897">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="2154168096381929" type="ArrayFase1">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="809062472336837" type="System">
+                            <param id="0" name="Object to create">Peca</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">ArrayFase1.CurX * (Peca.Width+5) + xTable</param>
+                            <param id="3" name="Y">ArrayFase1.CurY * (Peca.Height+5) + yTable</param>
+                        </action>
+                        <action id="2" name="Set at X" sid="8312877706500456" type="ArrayFase1">
+                            <param id="0" name="X">ArrayFase1.CurX</param>
+                            <param id="1" name="Value">ID%(ArrayFase1.Width*ArrayFase1.Height)</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="867117173494849" type="Peca">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">ID</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="5307980883526189" type="System">
+                            <param id="0" name="Variable">ID</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8564407655755578">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7944874602645255" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="1989416975448189" type="Function">
+                    <param id="0" name="Name">&quot;Start&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7728566994850651">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="1124725770691737" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Peca</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="4900570295375416" type="Text1">
+                    <param id="0" name="Text">Peca.id</param>
+                </action>
+                <action id="-9" name="Set value" sid="3126333091469721" type="System">
+                    <param id="0" name="Variable">ID</param>
+                    <param id="1" name="Value">Peca.id</param>
+                </action>
+                <action id="0" name="Call function" sid="4431258133295658" type="Function">
+                    <param id="0" name="Name">&quot;AtualizaAdjacentes&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="0" name="Call function" sid="6179924331045523" type="Function">
+                    <param id="0" name="Name">&quot;IncrementStepCounter&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5149314312689678">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="6912315280654213" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">voltar_bt</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4686090908341944" type="System">
+                    <param id="0" name="Variable">inicializado</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="1054978668871233" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="216822981289841" type="ArrayFase1" />
+                <action id="-16" name="Wait" sid="7686910449567397" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="7997256344129761" type="Peca" />
+                <action id="-16" name="Wait" sid="3383710976882533" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="8265024028152176" type="System" />
+                <action id="-16" name="Wait" sid="703632233441163" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="-25" name="Go to layout (by name)" sid="3237383032149228" type="System">
+                    <param id="0" name="Layout">&quot;MenuPrincipal&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6337217736924519">
+            <conditions>
+                <condition id="1" name="On any click" sid="2851407227150086" type="Mouse" />
+                <condition id="-14" name="Compare variable" sid="628323337810228" type="System">
+                    <param id="0" name="Variable">inicializado</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="3738256913526541" type="System">
+                    <param id="0" name="Variable">inicializado</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9637480883762509" type="System">
+                    <param id="0" name="Seconds">0</param>
+                </action>
+                <action id="0" name="Call function" sid="1638842739227035" type="Function">
+                    <param id="0" name="Name">&quot;Inicializar&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="3303930852622057" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="0" name="Call function" sid="2773751013194091" type="Function">
+                    <param id="0" name="Name">&quot;AtualizaBlocosIniciais&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6582498231821186">
+            <conditions>
+                <condition id="0" name="On function" sid="3232417059636511" type="Function">
+                    <param id="0" name="Name">&quot;AtualizaBlocosIniciais&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="1875956332622408">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="6377547982225029" type="System">
+                            <param id="0" name="Object">Peca</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8498351937452758" type="Peca">
+                            <param id="0" name="Instance variable">apagado</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1435995198534635" type="Peca">
+                            <param id="0" name="Animation">&quot;aceso&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9538736982150417">
+            <conditions>
+                <condition id="-3" name="On end of layout" sid="7855336510727697" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5178174879990969" type="ArrayFase1" />
+                <action id="-9" name="Destroy" sid="931380046990581" type="Peca" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

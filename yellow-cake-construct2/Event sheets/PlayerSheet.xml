@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>PlayerSheet</name>
+    <events>
+        <variable constant="0" name="PlayerLive" sid="4922646418052415" static="0" type="number">1</variable>
+        <event-block sid="9924039793050644">
+            <conditions>
+                <condition id="0" name="On function" sid="1016080930437285" type="Function">
+                    <param id="0" name="Name">&quot;KillPlayer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="197619181550132" type="System">
+                    <param id="0" name="Variable">PlayerLive</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="3328795041075342" type="System" />
+                <action id="0" name="Play" sid="5486950752950955" type="Audio">
+                    <param id="0" name="Audio file">intro_tremolo_3_</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5791622765812004">
+            <conditions>
+                <condition id="0" name="On function" sid="9854405083557972" type="Function">
+                    <param id="0" name="Name">&quot;RevivePlayer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="132563879654487" type="System">
+                    <param id="0" name="Variable">contamination_counter</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6847429409950417">
+            <conditions>
+                <condition id="0" name="On function" sid="1975878942267117" type="Function">
+                    <param id="0" name="Name">&quot;IsPlayerAlive&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set return value" sid="8799150688998908" type="Function">
+                    <param id="0" name="Value">PlayerLive</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
